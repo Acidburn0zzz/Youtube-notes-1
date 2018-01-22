@@ -1,0 +1,28 @@
+# Kernel
+linux-headers
+linux-lts-headers
+dkms
+
+# Host - Real machine
+
+virtualbox-host-dkms
+virtualbox-guest-iso
+virtualbox-ext-vnc
+
+sudo pacman -S linux-headers dkms virtualbox-host-dkms virtualbox-guest-iso virtualbox-ext-vnc
+
+sudo modprobe vboxdrv
+
+# Not recommended
+virtualbox-host-modules-arch
+
+# Guest - Virtual machine
+
+virtualbox-guest-dkms
+virtualbox-guest-utils
+
+sudo pacman -S virtualbox-guest-dkms virtualbox-guest-utils
+/usr/bin/VBoxClient-all &
+
+# Not recommended
+virtualbox-guest-modules-arch
