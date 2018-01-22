@@ -9,9 +9,9 @@ virtualbox-host-dkms
 virtualbox-guest-iso
 virtualbox-ext-vnc
 
-sudo pacman -S linux-headers dkms virtualbox-host-dkms virtualbox-guest-iso virtualbox-ext-vnc
+`sudo pacman -S linux-headers dkms virtualbox-host-dkms virtualbox-guest-iso virtualbox-ext-vnc`
 
-sudo modprobe vboxdrv
+`sudo modprobe vboxdrv`
 
 # Not recommended
 virtualbox-host-modules-arch
@@ -21,8 +21,8 @@ virtualbox-host-modules-arch
 virtualbox-guest-dkms
 virtualbox-guest-utils
 
-sudo pacman -S virtualbox-guest-dkms virtualbox-guest-utils
-/usr/bin/VBoxClient-all &
+`sudo pacman -S virtualbox-guest-dkms virtualbox-guest-utils`
+`/usr/bin/VBoxClient-all &`
 
 # Not recommended
 virtualbox-guest-modules-arch
