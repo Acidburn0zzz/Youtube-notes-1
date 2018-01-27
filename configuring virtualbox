@@ -1,0 +1,15 @@
+# Add user to virtualbox groups - /etc/group
+
+# Real and Virtual machines
+
+sudo gpasswd -a YOUR_USER vboxusers
+sudo gpasswd -a YOUR_USER vboxsf
+
+# Create virtual machine
+Legacy BIOS
+EFI/UEFI BIOS
+
+# Configuration
+Shared folders - Choose a folder - virtualbox
+Shared Clipboard - Bidirectional (copy/paste commands, scripts)
+Drag'n'Drop - Bidirectional
