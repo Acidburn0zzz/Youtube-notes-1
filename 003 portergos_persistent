@@ -1,0 +1,61 @@
+portergos persistent
+
+Advantages
+
+Save data
+Download
+Install packages
+
+Uses less space than installed system
+    iso requires around 2.5GB
+    Installed system requires 8GB
+
+Less writings to flash drive (less cicles=longer life to flash drive)
+
+Syslinux boots both EFI and Legacy Mode
+
+Can boot with persistence or live version (persistent files accessible to live version)
+
+Can be transfered to smaller USB drives (2.5 minimum) to bigger one and running /portergos/persistent_portergos to readjust the size (loose data from the readjusted drive)
+
+Disadvantages
+
+Not sure how full system upgrades would make the system unstable (specially concerning write/rewrite cicles - not tested)
+Needs a dedicated drive (needs to be installed to a drive, NOT a partition)
+
+
+### VIRTUAL MACHINE
+
+Virtualbox
+boot the iso
+sudo dd if=/dev/sr0 of=/dev/sda
+poweroff > remove the iso
+
+boot disk (as live)
+open terminal and install script
+sudo /portergos/persistent_portergos
+reboot
+boot as persistent, enjoy it!
+
+### REAL MACHINE
+
+Steps:
+sudo dd bs=4M if=/path/to/portergos.iso of=/dev/sdX status=progress && sync
+Configure BIOS to boot from flash drive
+boot as live
+
+open terminal
+sudo /portergos/persistent_portergos
+reboot
+boot as persistent, enjoy it!
+
+
+
+
+
+
+
+
+
+
+
